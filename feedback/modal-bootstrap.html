@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Sign-up page using Bootstrap</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery-3.5.1.slim.min.js"></script>
+    <script type="text/javascript" src="bootstrap.min.js"></script>
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <link rel="stylesheet" href="moda-sign-up.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header ">
+                <h5 class="modal-title" id="exampleModalLabel">Sign up</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <form action="report.jsp" method="POST">
+                        <label for="name"><i class="fa fa-user"></i> Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Full Name" required>
+                        
+                        <label for="email" class="after-name"><i class="fa fa-envelope-o"></i>Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Email" required>
+                        
+                        <label for="useranme" class="after-name"><i class="fa fa-user"></i>Useranme</label>
+                        <input type="text" class="form-control" id="useranme" placeholder="Create Useranme" required>
+                        
+                        <label for="password" class="after-name"><i class="fa fa-lock"></i>Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Create Password" required>
+                        
+                        <label for="conpass" class="after-name"><i class="fa fa-lock"></i>Confirm Password</label>
+                        <input type="password" class="form-control" id="Conpass" placeholder="Confirm Password" required>
+                        
+                        <button type="submit" class="btn btn-primary mt-3">Sign-up</button>&nbsp;&nbsp;<button type="reset" class="btn btn-success mt-3">Cancel</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <small>&copy; SciTech 2020</small>
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

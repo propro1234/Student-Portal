@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <style>
+        body
+        {
+            background: linear-gradient(rgba(0,0,0,0.6) , rgba(0,0,0,0.6)),url(img-3.jpg);
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container vh-100">
+        <div class="row justify-content-center h-100">
+            <div class="card my-auto shadow border-primary mb-3" style="width: 500px;">
+                <div class="card-header text-center">
+                    <img class="card-img-top w-25" src="img/avatar.svg" alt="" style="width: 100px;">
+                    <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><b>Admin Panel</b></h2>
+                </div>
+                <div class="card-body">
+                    <form action="AdminPanel.jsp" method="POST">
+                        <div class="form-group">
+                            <label for="uname">Username</label>
+                            <input type="text" class="form-control" id="uname" name="uname" placeholder="Username" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="pass">Password</label>
+                            <input type="password" class="form-control" id="pass" name="pass" placeholder="Password" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="conpass">Confirm Password</label>
+                            <input type="password" class="form-control" id="conpass" name="conpass" placeholder="Confirm Password" required/>
+                        </div>
+                        <div class="form-group text-left">
+                            <h4 style="margin-bottom: -25px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Operations</h4><select name="opt" id="" style="margin-left: 130px;">
+                                <option value="insert">Insert</option>
+                                <option value="delete">Delete</option>
+                                <option value="update">Update</option>
+                                <option value="search">Search</option>
+                            </select>
+                        </div>
+                        
+                        <input type="submit" class="btn btn-primary w-100" value="Go">
+                    </form>
+                </div>
+                <div class="card-footer text-right">
+                    <small>&copy; SciTech 2020</small>
+                    <a href="Homepage.html" style="float: left;text-decoration: none;"><i class="fa fa-home">Home</i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget Password</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <script type="text/javascript" src="smtp.js"></script>
+    <script 
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+
+    <!-- <style>
+        .btn-primary
+        {
+            margin-top: 15px !important;
+        }
+    </style> -->
+    <style>
+        #rm
+        {
+            display: none;
+        }
+        body
+        {
+            background: linear-gradient(rgba(0,0,0,0.6) , rgba(0,0,0,0.6)),url(back.jpg);
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container vh-100">
+        <div class="row justify-content-center h-100">
+            <div class="card w-25 my-auto shadow border-primary mb-3">
+                <div class="card-header text-center">
+                    <img class="card-img-top w-50" src="img/avatar.svg" alt="">
+                    <!-- <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><b></b></h2> -->
+                </div>
+                <div class="card-body">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Email" />
+                            
+                            <input type="text" id="rm" name="rm">
+                        </div>
+                        <input type="submit" class="btn btn-secondary w-100" onclick="sendEmail();" value="Send">
+                        <div class="form-group">
+                            <label for="otp">Verify OTP</label>
+                            <input type="text" class="form-control" id="otp" name="otp" placeholder="OTP" />
+                        </div>
+                        <input type="submit" class="btn btn-secondary" style="float: right;" onclick="verifyOTP();" value="Verify OTP">
+                </div>
+                <div class="card-footer text-right">
+                    <small>&copy; SciTech 2020</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var rm = Math.floor(Math.random() * 1000000);
+        
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "pro.email.address890@gmail.com",
+                Password: "@Propro890",
+                To: document.getElementById('email').value,
+                From: "pro.email.address890@gmail.com",
+                Subject: "Sending Email using javascript",
+                Body: document.getElementById('rm').innerText = rm,
+            })
+                .then(function (message) {
+                    alert("mail sent successfully")
+                });
+        } 
+    </script>
+    <script>
+        function verifyOTP()
+        {
+            var otp = document.getElementById('otp').value;
+            if(rm == otp)
+            {
+                alert("OTP verified");
+                window.location = "resetPassword.html";
+            }
+            else
+            {
+                alert("OTP is wrong");
+            }
+        }
+    </script>
+</body>
+
+</html>

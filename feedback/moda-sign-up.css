@@ -1,0 +1,30 @@
+/*-----------------header-------------------*/
+.close
+{
+    outline: none !important;
+}
+.modal-title
+{
+    text-align: center !important;
+
+}
+/*------------------body------------------*/
+.after-name
+{
+    margin-top: 10px !important;
+    color: #000 !important;
+    font-weight: 600 !important;
+    font-family: 'poppins', sans-serif !important;
+}
+/*--------------button------------------*/
+.btn-success
+{
+    background: none !important;
+    color: #000 !important;
+    font-weight: 600 !important;
+}
+.btn-success:hover
+{
+    background: rgb(21, 194, 70) !important;
+    color: #fff !important;
+}
